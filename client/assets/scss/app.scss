@@ -1,2 +1,147 @@
 @import "settings";
 @import "foundation";
+@import "font-awesome";
+
+
+strong {
+	font-size: 2em;
+}
+
+.title-bar {
+	position: relative;
+	z-index: 500;
+
+	a {
+		color: $gray;
+		i {
+			display: inline-block;
+			width: 0.9rem;
+			height: 0.9rem;
+			border: solid 3px $gray;
+			border-right: 0;
+			border-top: 0;
+			transform: rotate(45deg);
+		}
+	}
+
+	.logo {
+		height: 20px;
+	}
+}
+
+.video {
+	display: inline-block;
+}
+
+.modal {
+	color: $gray-dark;
+	z-index: 1050;
+}
+
+.panel1, .panel2 {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	align-items: center;
+	position: relative;
+
+	height: calc(100vh - 49px);
+
+	.picto {
+		display: inline-block;
+		max-width: 40%;
+	}
+
+	p {
+		margin: 0.5em;
+		line-height: 1.4;
+	}
+}
+
+.panel1 {
+	background: url(../images/bg.jpg) no-repeat top left;
+	background-size: cover;
+
+	> p {
+		margin: 0;
+	}
+}
+
+.panel2 {
+	background: $primary-color;
+	justify-content: flex-start;
+	padding-top: 1rem;
+	
+	li {
+		margin-bottom: 0.8rem;
+	}
+}
+
+.panel-bottom {
+	
+	height: auto;
+	.panel2 {
+		height: calc(100% - 50px);
+	}
+}
+
+.btnPanel {
+	@include show-for-only(small);
+
+	display: block;
+	width: 100%;
+	text-align: center;
+	line-height: 20px;
+	height: 22px;
+	background: url(../images/btn-bg.png) transparent center no-repeat;
+	color: #fff;
+	font-size: 0.8rem;
+
+	&:hover, &:focus {
+		color: $gray-light;
+	}
+
+	&.close {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}
+
+.video {
+	display: inline-block;
+	position: relative;
+	background: $card-background;
+
+	@extend .thumbnail;
+
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		background: url(../images/play.png) center no-repeat;
+		background-size: 55px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.accueil {
+	padding: 3em;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-around;
+	height: calc(100vh - 49px);
+
+	a {
+		@extend %button;
+		@include button-style(
+			$background: $primary-color, // Background color
+			$background-hover: lighten($primary-color, 10%), // Background color on hover. Use "auto" to generate automatically
+			$color: #000, // Text color
+			$style: hollow // Can be solid or hollow
+		);
+	}
+}

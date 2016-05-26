@@ -11,6 +11,7 @@ var gulp     = require('gulp');
 var rimraf   = require('rimraf');
 var router   = require('front-router');
 var sequence = require('run-sequence');
+var plumber      = require('gulp-plumber');
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -27,7 +28,8 @@ var paths = {
   // Sass will check these folders for files when you use @import.
   sass: [
     'client/assets/scss',
-    'bower_components/foundation-apps/scss'
+    'bower_components/foundation-apps/scss',
+    'bower_components/font-awesome/scss'
   ],
   // These files include Foundation for Apps and its dependencies
   foundationJS: [
@@ -107,6 +109,7 @@ gulp.task('sass', function () {
       outputStyle: (isProduction ? 'compressed' : 'nested'),
       errLogToConsole: true
     }))
+    .pipe($.plumber())
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie 10']
     }))

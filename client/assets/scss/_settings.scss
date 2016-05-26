@@ -36,34 +36,34 @@
 
 // Change any value in this map from "true" to "false" to disable that component's CSS class output. You'll still be able to use the component's mixins, but none of our pre-written classes will be in your CSS.
 
-// $include-css: (
-//   accordion: true,
-//   action-sheet: true,
-//   block-list: true,
-//   button: true,
-//   button-group: true,
-//   card: true,
-//   coloring: true,
-//   extras: true,
-//   forms: true,
-//   grid: true,
-//   iconic: true,
-//   label: true,
-//   badge: true,
-//   list: true,
-//   menu-bar: true,
-//   modal: true,
-//   motion: true,
-//   notification: true,
-//   off-canvas: true,
-//   panel: true,
-//   popup: true,
-//   switch: true,
-//   tabs: true,
-//   title-bar: true,
-//   typography: true,
-//   utilities: true,
-// ); 
+$include-css: (
+  accordion: false,
+  action-sheet: true,
+  block-list: true,
+  button: false,
+  button-group: false,
+  card: false,
+  coloring: true,
+  extras: true,
+  forms: false,
+  grid: true,
+  iconic: false,
+  label: false,
+  badge: false,
+  list: true,
+  menu-bar: false,
+  modal: true,
+  motion: true,
+  notification: false,
+  off-canvas: false,
+  panel: true,
+  popup: false,
+  switch: false,
+  tabs: false,
+  title-bar: true,
+  typography: true,
+  utilities: true,
+); 
 
 // 2. Global Styles
 // - - - - - - - - - - - - - - -
@@ -77,10 +77,10 @@
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+// $base-font-size: 120%;
 
 // $base-line-height is 24px while $base-font-size is 16px
-// $base-line-height: 1.5;
+$base-line-height: 1.4;
 
 // Text selector helpers
 // $headers: "h1,h2,h3,h4,h5,h6";
@@ -91,23 +91,23 @@
 
 // We use these to control various global styles
 // $body-background: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$body-font-color: #fff;
+$body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
 
 // Application Colors
-// $primary-color: #00558b;
+$primary-color: #004881;
 // $secondary-color: #f1f1f1;
 // $alert-color: #F04124;
 // $info-color: #A0D3E8;
 // $success-color: #43AC6A;
 // $warning-color: #F08A24;
 // $dark-color: #232323;
-// $gray: #dfdfdf;
-// $gray-dark: darken($gray, 8);
-// $gray-light: lighten($gray, 8);
+$gray: #535b62;
+$gray-dark: darken($gray, 8);
+$gray-light: lighten($gray, 8);
 
 // We use these to make sure border radius matches unless we want it different.
 // $global-radius: 4px;
@@ -139,10 +139,10 @@
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: $font-weight-normal;
-// $header-font-color: #222;
+$header-font-color:  $body-font-color;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
-// $header-bottom-margin: .5rem;
+$header-bottom-margin: 1rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
@@ -234,7 +234,7 @@
 // - - - - - - - - - - - - - - -
 
 // $container-width: rem-calc(900);
-// $block-padding: $global-padding;
+$block-padding: 1.5rem;
 // $total-columns: 12;
 // $block-grid-max-size: 6; 
 
@@ -340,7 +340,7 @@
 // $closebutton-color: #999;
 // $closebutton-color-hover: #333;
 
-// $thumbnail-padding: 0.5rem;
+$thumbnail-padding: 0.2rem;
 // $thumbnail-shadow: 0 3px 15px rgba(black, 0.25); 
 
 // 13. Forms
@@ -444,7 +444,7 @@
 // $modal-border: 0;
 // $modal-radius: 0px;
 // $modal-shadow: none;
-// $modal-zindex: 1000;
+$modal-zindex: 1020;
 // $modal-sizes: (
 //   tiny: 300px,
 //   small: 500px,
@@ -453,7 +453,7 @@
 // );
 
 // $modal-overlay-class: 'modal-overlay';
-// $modal-overlay-background: rgba(#333, 0.7); 
+$modal-overlay-background: rgba(#333, 0.8); 
 
 // 18. Motion UI
 // - - - - - - - - - - - - - - -
@@ -542,12 +542,12 @@
 // 21. Panel
 // - - - - - - - - - - - - - - -
 
-// $panel-size-horizontal: 300px;
+$panel-size-horizontal: 60%;
 // $panel-size-vertical: 300px;
 // $panel-padding: 0;
 
-// $panel-background: #fff;
-// $panel-shadow: 3px 0 10px rgba(black, 0.25);
+$panel-background: transparent;
+$panel-shadow: 0px 0 0px rgba(black, 0.25);
 // $panel-animation-speed: 0.25s; 
 
 // 22. Popup
@@ -592,10 +592,10 @@
 
 // $titlebar-center-width: 50%;
 // $titlebar-side-width: (100% - $titlebar-center-width) / 2;
-// $titlebar-background: #eee;
-// $titlebar-color: #000;
-// $titlebar-border: 1px solid #ccc;
-// $titlebar-padding: $global-padding;
+$titlebar-background: #fff;
+$titlebar-color: $gray;
+$titlebar-border: 0px solid #ccc;
+$titlebar-padding: 1rem;
 // $titlebar-item-classes: (
 //   center: 'center',
 //   left: 'left',

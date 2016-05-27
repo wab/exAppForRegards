@@ -1,6 +1,8 @@
 
 strong {
 	font-size: 2em;
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
 }
 
 .wrapper {
@@ -43,17 +45,12 @@ strong {
 }
 
 .panel1, .panel2 {
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-between;
-	align-items: center;
-	position: relative;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	
+	padding: 2em 0;
 
 	.picto {
 		display: inline-block;
-		max-width: 40%;
+		max-width: 50%;
 	}
 
 	p {
@@ -62,21 +59,21 @@ strong {
 }
 
 .panel1 {
-	background: url(../images/bg-mobile.jpg) no-repeat top left;
+	background: url(../images/bg-mobile.jpg) no-repeat center left;
 	background-size: cover;
 
 	@include breakpoint(medium) {
 		background-image: url(../images/bg.jpg);
 	}
 
-	> p {
-		font-size: 1.1em;
+	p {
+		font-size: 1.2em;
+		margin-bottom: 0;
 	}
 }
 
 .panel2 {
 	background: $primary-color;
-	justify-content: flex-start;
 	
 	li {
 		margin-bottom: 0.8rem;
@@ -149,12 +146,16 @@ strong {
 	}
 
 }
+.close-button {
+	top: 0;
+	right: 0;
+}
 
 .accueil {
 	padding: 3em;
 	display: flex;
 	flex-flow: column nowrap;
-	justify-content: space-around;
+	justify-content: center;
 
 	a {
 		@extend %button;

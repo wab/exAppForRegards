@@ -6,16 +6,19 @@ animationOut: fadeOut
 ---
 
 <div class="grid-block medium-6">
-	<div class="grid-content panel1">
-		<img src="./assets/images/signaletik.png" alt="picto interdiction" class="picto">
-		<p class="text-center"><strong>Never</strong> <br>be exposed to a fall or <br>work at height without protection</p>
-		<a href="#" zf-open="videoModal" title="lire la vidéo" class="video"><img src="./assets/images/screenshot.jpg" alt="plateforme pétrolière"></a>
-		<div zf-modal="" id="videoModal" animation-in="slideInUp" animation-out="slideOutdown" class="dialog">
-			<a zf-close="" class="close-button">×</a>
-			<div class="videoWrapper">
-			    <iframe width="100%" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0" allowfullscreen></iframe>
+	<div class="grid-block vertical panel1">
+		<div class="grid-block">
+			<div class="grid-content">
+				<p class="text-center">
+					<img src="./assets/images/signaletik.png" alt="picto interdiction" class="picto ease shake"> <br>
+					<strong>Never</strong> <br>be exposed to a fall or <br>work at height without protection
+				</p>
 			</div>
-			
+		</div>
+		<div class="grid-block">
+			<div class="grid-content text-center">
+				<a href="#" zf-open="videoModal" title="lire la vidéo" class="video"><img src="./assets/images/screenshot.jpg" alt="plateforme pétrolière"></a>
+			</div>
 		</div>
 	</div>
 		<a href="#" zf-open="panelInfo" class="btnPanel close"><i class="fa fa-chevron-up"></i></a>
@@ -23,15 +26,25 @@ animationOut: fadeOut
 
 <zf-panel id="panelInfo" position="bottom" class="medium-grid-block medium-6">
 	<a href="#" zf-close="" class="btnPanel open"><i class="fa fa-chevron-down"></i></a>
-	<div class="grid-content panel2">
-		<p><strong>You should :</strong></p>
-		<ul class="no-bullet">
-			<li>Never conduct work at height without being trained on the work at height procedures and the equipment use</li>
-	 		<li>Never disregard work at height procedures when working outside a protected area</li>
-	 		<li>Never ignore the barriers or control in place to protect a work at height area </li>
-	 		<li>Check equipement before using it </li>
-	 		<li>Be 100% tied off when at height outside of a protected area</li>
-		</ul>
+	<div class="grid-block panel2">
+		<div class="grid-content">
+			<p><strong>You should :</strong></p>
+			<ul class="no-bullet">
+				<li>Never conduct work at height without being trained on the work at height procedures and the equipment use</li>
+		 		<li>Never disregard work at height procedures when working outside a protected area</li>
+		 		<li>Never ignore the barriers or control in place to protect a work at height area </li>
+		 		<li>Check equipement before using it </li>
+		 		<li>Be 100% tied off when at height outside of a protected area</li>
+			</ul>			
+		</div>
 	</div>
 </zf-panel>
+
+<div zf-modal="" id="videoModal" animation-in="slideInUp" animation-out="slideOutdown" class="dialog">
+	<div class="text-right"><a zf-close="" class="close-button">×</a></div>
+	<div class="videoWrapper">
+	    <iframe width="100%" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0" allowfullscreen></iframe>
+	</div>
+	
+</div>
 	

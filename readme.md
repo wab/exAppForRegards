@@ -1,6 +1,6 @@
 # Exercice pour Regards
 
-Fait avec foudation for Apps
+Fait avec [Foundation for Apps](http://foundation.zurb.com/apps/docs)
 
 ## Requirements
 

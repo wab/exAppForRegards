@@ -50,7 +50,7 @@ strong {
 
 	.picto {
 		display: inline-block;
-		max-width: 50%;
+		max-width: 45%;
 	}
 
 	p {
@@ -115,6 +115,7 @@ strong {
 	display: inline-block;
 	position: relative;
 	background: $card-background;
+	max-width: 90%;
 
 	@extend .thumbnail;
 

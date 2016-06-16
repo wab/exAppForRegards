@@ -161,6 +161,30 @@ strong {
 	right: 0;
 }
 
+//Signaletik picto
+
+.picto {
+	.bg {
+		fill: #fff;
+	}
+
+	.symbol1 {
+		fill: #93243a;
+		animation: animateFill 2s ease ;
+	}
+	.symbol2 {
+		fill: #7f7f7f;
+		animation-duration: 1s;
+	}
+
+}
+
+@keyframes animateFill{
+  0% { fill: #fff; }
+  30% { fill: #333; }
+  100% { fill: #93243a; }
+}
+
 .accueil {
 	padding: 3em;
 	display: flex;

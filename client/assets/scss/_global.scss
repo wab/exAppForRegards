@@ -1,3 +1,10 @@
+@include breakpoint(medium) {
+
+	html {
+		font-size: 120%;
+	}
+}
+
 
 strong {
 	font-size: 2em;
@@ -50,7 +57,7 @@ strong {
 
 	.picto {
 		display: inline-block;
-		max-width: 45%;
+		max-width: 40%;
 	}
 
 	p {
@@ -70,6 +77,7 @@ strong {
 		font-size: 1.2em;
 		margin-bottom: 0;
 	}
+
 }
 
 .panel2 {
@@ -78,6 +86,13 @@ strong {
 	li {
 		margin-bottom: 0.8rem;
 		line-height: 1.4;
+	}
+
+	@include breakpoint(medium) {
+
+		li {
+			margin-bottom: 1.4em;
+		}
 	}
 }
 

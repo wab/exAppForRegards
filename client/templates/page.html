@@ -1,6 +1,7 @@
 ---
 name: page
 url: /
+controller: pageCtrl
 animationIn: fadeIn
 animationOut: fadeOut
 ---
@@ -24,7 +25,7 @@ animationOut: fadeOut
 		<a href="#" zf-open="panelInfo" class="btnPanel close"><i class="fa fa-chevron-up"></i></a>
 </div>
 
-<zf-panel id="panelInfo" position="bottom" class="medium-grid-block medium-6">
+<zf-panel id="panelInfo" zf-swipe-close="bottom" position="bottom" class="medium-grid-block medium-6">
 	<a href="#" zf-close="" class="btnPanel open"><i class="fa fa-chevron-down"></i></a>
 	<div class="grid-block panel2">
 		<div class="grid-content">

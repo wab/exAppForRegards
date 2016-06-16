@@ -11,14 +11,14 @@ animationOut: fadeOut
 		<div class="grid-block">
 			<div class="grid-content">
 				<p class="text-center">
-					<img src="./assets/images/signaletik.png" alt="picto interdiction" class="picto ease shake"> <br>
+					<img src="assets/images/signaletik.png" alt="picto interdiction" class="picto ease shake"> <br>
 					<strong>Never</strong> <br>be exposed to a fall or <br>work at height without protection
 				</p>
 			</div>
 		</div>
 		<div class="grid-block">
 			<div class="grid-content text-center">
-				<a href="#" zf-open="videoModal" title="lire la vidéo" class="video"><img src="./assets/images/screenshot.jpg" alt="plateforme pétrolière"></a>
+				<a href="#" zf-open="videoModal" title="lire la vidéo" class="video"><img src="assets/images/screenshot.jpg" alt="plateforme pétrolière"></a>
 			</div>
 		</div>
 	</div>
@@ -41,11 +41,13 @@ animationOut: fadeOut
 	</div>
 </zf-panel>
 
-<div zf-modal="" id="videoModal" animation-in="slideInUp" animation-out="slideOutdown" class="dialog">
-	<div class="text-right"><a zf-close="" class="close-button">×</a></div>
-	<div class="videoWrapper">
-	    <iframe width="100%" src="https://www.youtube.com/embed/M7lc1UVf-VE" frameborder="0" allowfullscreen></iframe>
-	</div>
-	
-</div>
-	
+<aside zf-modal="" id="videoModal" animation-in="slideInUp" animation-out="slideOutdown">
+  <!-- "Video For Everybody" http://camendesign.com/code/video_for_everybody -->
+  <video controls="controls" poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360">
+    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4" />
+    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm" />
+    <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg" />
+    <img alt="Big Buck Bunny" src="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg" width="640" height="360" title="No video playback capabilities, please download the video below" />
+  </video>    
+</aside>
+
